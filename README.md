@@ -199,3 +199,11 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 - `POST` to create a reaction stored in a single thought's `reactions` array field
 
 - `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
+
+
+## github repo
+The link to the github repository can be found here: https://github.com/metayerkinson/Nosql-social-network-backend
+
+## walkthrough video
+
+The link to the walkthrough video can be found here:
