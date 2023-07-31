@@ -205,5 +205,5 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 The link to the github repository can be found here: https://github.com/metayerkinson/Nosql-social-network-backend
 
 ## walkthrough video
-
 The link to the walkthrough video can be found here:
+https://drive.google.com/file/d/1rCT72KcZA57ltVdzJHBpcKnXc51b2EjT/view
