@@ -206,4 +206,4 @@ The link to the github repository can be found here: https://github.com/metayerk
 
 ## walkthrough video
 The link to the walkthrough video can be found here:
-(https://vimeo.com/manage/videos/852006726)
+(https://vimeo.com/manage/videos/852006726
