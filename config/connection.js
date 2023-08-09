@@ -1,11 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Wrap Mongoose around local connection to MongoDB
-mongoose.connect('mongodb://localhost:27017/userThoughtDB', {
-  // useFindAndModify: false,  
+mongoose.connect("mongodb://127.0.0.1:27017/ThoughtDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
+});
 
-// Export connection 
+// Export connection
 module.exports = mongoose.connection;

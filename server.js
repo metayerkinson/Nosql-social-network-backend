@@ -3,7 +3,7 @@ const db = require("./config/connection");
 const routes = require("./routes");
 const cors = require("cors");
 
-const PORT = 3001;
+const PORT = 5000;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
