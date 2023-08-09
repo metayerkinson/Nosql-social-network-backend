@@ -1,15 +1,13 @@
 const { Thought, User } = require("../models");
-const { populate } = require("../models/User");
 
 const thoughtController = {
-  // get all thoughts
-  getAllThoughts(req, res) {
+  getThoughts(req, res) {
     Thought.find()
-      .then((thought) => res.json(thought))
+      .then((res) => res.json(res))
       .catch((err) => res.status(500).json(err));
   },
 
-  createThought(req, res) {
+  addThought(req, res) {
     Thought.create(req.body)
       .then((data) => {
         return User.findOneAndUpdate(
@@ -18,7 +16,7 @@ const thoughtController = {
           { new: true }
         );
       })
-      .then((userData) => res.json(userData))
+      .then((data) => res.json(data))
       .catch((err) => res.status(500).json(err));
   },
 
@@ -45,13 +43,13 @@ const thoughtController = {
 
   getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.id })
-      .then((dbThoughtData) => {
+      .then((thoughtData) => {
         // if no thought is found
-        if (!dbThoughtData) {
+        if (thoughtData) {
           res.status(404).json({ message: "Thought does not exist" });
           return;
         }
-        res.json(dbThoughtData);
+        res.json(thoughtData);
       })
       .catch((err) => {
         console.log(err);
@@ -59,7 +57,7 @@ const thoughtController = {
       });
   },
 
-  deleteThought(req, res) {
+  removeThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.id })
       .then((thought) => {
         if (!thought) {
@@ -106,7 +104,7 @@ const thoughtController = {
         !thought
           ? res
               .status(404)
-              .json({ message: "No thought found with that ID :(" })
+              .json({ message: "No reactionwith that ID :(" })
           : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
